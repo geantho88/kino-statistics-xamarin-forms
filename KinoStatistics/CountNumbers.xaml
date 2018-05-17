@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.CountNumbers">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="4" BackgroundColor="#ffffff">
+			<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+				<Label HorizontalOptions="Center" TextColor="#ffffff" FontSize="30" Text="Εμφανίσεις αριθμών" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<StackLayout Padding="15,10,15,15" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+					<Label Text="Αριθμός" FontSize="22" TextColor="#FF8393A0" />
+					<Image x:Name="sortnumberbtn" Source="kssortup.png" WidthRequest="24" HeightRequest="24">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="sortnumberbtn_Tap" />
+						</Image.GestureRecognizers>
+					</Image>
+				</StackLayout>
+				<StackLayout Padding="0,10,15,15" HorizontalOptions="EndAndExpand" Orientation="Horizontal">
+					<Label Text="Εμφανίσεις" FontSize="22" TextColor="#FF8393A0" />
+					<Image x:Name="countbtn" Source="kssortdown.png" WidthRequest="24" HeightRequest="24">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="countbtn_Tap" />
+						</Image.GestureRecognizers>
+					</Image>
+				</StackLayout>
+			</StackLayout>
+			<ListView x:Name="CountList" HorizontalOptions="FillAndExpand">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Vertical" Spacing="18" HorizontalOptions="FillAndExpand" Padding="10,0,10,0">
+								<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+									<AbsoluteLayout>
+										<Image Source="kinoball.png" WidthRequest="50" HeightRequest="44" />
+										<StackLayout AbsoluteLayout.LayoutBounds="0.27,0.35,0.25,0.40" AbsoluteLayout.LayoutFlags="All">
+											<Label Text="{Binding numberShow}" XAlign="Center" TextColor="Black" FontSize="16" />
+										</StackLayout>
+									</AbsoluteLayout>
+									<StackLayout Orientation="Horizontal" Padding="0,5,0,0"  HorizontalOptions="FillAndExpand">
+										<ProgressBar Progress="{Binding percentageshow}" HorizontalOptions="FillAndExpand" />
+									</StackLayout>
+									<StackLayout Orientation="Horizontal" Padding="10,5,0,0">
+										<Label Text="{Binding numbercount}" FontSize="22" HorizontalOptions="End" TextColor="#FF8393A0" />
+										<Label Text="Φορές" HorizontalOptions="Start" FontSize="22" TextColor="#FF8393A0" />
+									</StackLayout>
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<StackLayout x:Name="AdBanner" Padding="0,10,0,0">
+
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

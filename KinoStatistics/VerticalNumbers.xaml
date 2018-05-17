@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.VerticalNumbers">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="#ffffff">
+			<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+				<Label HorizontalOptions="Center" TextColor="#ffffff" FontSize="30" Text="Λήγοντες αριθμοί" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" x:Name="NoticeArea" HorizontalOptions="CenterAndExpand" Padding="10,5,10,10">
+					<Label Text="Επιλέξτε τον λήγοντα αριθμό για να προβάλετε στατιστικά στοιχεία" XAlign="Center" x:Name="NoticeText" HeightRequest="45" TextColor="#FF818181" FontSize="12" />
+				</StackLayout>
+			<StackLayout Orientation="Horizontal" x:Name="PickerArea" HorizontalOptions="FillAndExpand">
+			</StackLayout>
+			<ListView x:Name="VerticalNumbersList" RowHeight="60" HasUnevenRows="true" ItemTapped="ListItem_Click">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Vertical">
+								<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+									<StackLayout Orientation="Vertical" Padding="5,0,0,15">
+										<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+											<Label Text="Εμφανίστηκαν" FontSize="16" HorizontalOptions="End" TextColor="#FFA500" />
+											<Label Text="{Binding numscount}" HorizontalOptions="Start" FontSize="16" TextColor="#FFA500" />
+											<Label Text="Λήγοντες" HorizontalOptions="Start" FontSize="16" TextColor="#FFA500" />
+										</StackLayout>
+										<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+											<Label Text="Στην κληρωση Νο : " FontSize="12" HorizontalOptions="End" TextColor="#FF8393A0" />
+											<Label Text="{Binding drawnumber}" HorizontalOptions="Start" FontSize="12" TextColor="#FF8393A0" />
+											<Label Text="Στις " FontSize="12" HorizontalOptions="End" TextColor="#FF8393A0" />
+										</StackLayout>
+										<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+											<Label Text="{Binding drawTimestring}" HorizontalOptions="Start" FontSize="12" TextColor="#FF8393A0" />
+										</StackLayout>
+										<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+											<Label Text="Πριν από " FontSize="16" HorizontalOptions="End" TextColor="#FF8393A0" />
+											<Label Text="{Binding lastdrawshown}" HorizontalOptions="Start" FontSize="16" TextColor="#FF8393A0" />
+											<Label Text="κληρώσεις " FontSize="16" HorizontalOptions="End" TextColor="#FF8393A0" />
+										</StackLayout>
+										<Label Text="Επιλέξτε για να δείτε τους αριθμούς" TextColor="Red" FontSize="11" HorizontalOptions="Center" />
+									</StackLayout>
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<StackLayout x:Name="AdBanner" Padding="0,10,0,0">
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

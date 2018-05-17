@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.TheGame">
+	<TabbedPage.Children>
+		<ContentPage Title="Το Παιχνιδι" BackgroundColor="#ffffff">
+			<StackLayout Orientation="Vertical" Padding="10,0">
+				<!--<StackLayout Padding="10,10,5,0" HorizontalOptions="Center">
+					<Image Source="kskinologo.png" x:Name="kskinologo" WidthRequest="200" HeightRequest="160" />
+				</StackLayout>-->
+				<Label x:Name="thegametext" TextColor="#FF818181" Text="Είναι το πρώτο παιχνίδι στην Ελλάδα του οποίου οι κληρώσεις γίνονται με τη βοήθεια κλειστού κυκλώματος τηλεόρασης. Απευθύνεται στο κοινό το οποίο δεν θέλει να περιμένει ώρες ή μέρες μέχρι την κλήρωση και μπορεί να προσφέρει μικρά και μεγάλα κέρδη αφού ο παίχτης έχει τη δυνατότητα να επιλέξει το επίπεδο των κερδών του. Κάθε φορά που γίνεται μια κλήρωση ΚΙΝΟ κληρώνονται 20 διαφορετικοί αριθμοί από το 1 μέχρι το 80." XAlign="Center" FontSize="18" />
+			</StackLayout>
+		</ContentPage>
+		<ContentPage Title="το δελτιο" BackgroundColor="#ffffff">
+			<StackLayout Orientation="Vertical" Padding="10,0">
+				<StackLayout Padding="10,10,5,10" HorizontalOptions="Center">
+					<Image Source="ksdeltio1.png" x:Name="ksdeltio" WidthRequest="150" HeightRequest="220" />
+				</StackLayout>
+				<Label x:Name="theform" TextColor="#FF818181" Text="θα πρέπει να επιλέξουμε και εδώ ανάμεσα σε 80 αριθμούς, ελάχιστη επιλογή είναι 1 και το μέγιστο 12 αριθμοί. Οι αριθμοί που κερδίζουν είναι 20 και ανάμεσα σε αυτούς τους αριθμούς εμείς θα αναζητήσουμε τους δικούς μας αριθμούς για να δούμε αν κερδίσαμε ή όχι." XAlign="Center" FontSize="18" />
+			</StackLayout>
+		</ContentPage>
+		<ContentPage Title="συμπληρωση" BackgroundColor="#ffffff">
+			<StackLayout Orientation="Vertical" Padding="10,0">
+				<StackLayout Padding="10,10,5,10" HorizontalOptions="Center">
+					<Image Source="kshelp.png" x:Name="kshelp" WidthRequest="200" HeightRequest="40" Aspect="Fill" />
+				</StackLayout>
+				<Label x:Name="fill1" TextColor="#FF818181" Text="Η ελάχιστη επιλογή είναι μία στήλη (απλή στήλη), επιλέγοντας το σύνολο των αριθμών, που αντιστοιχεί στον επιλεγμένο τύπο παιχνιδιού." XAlign="Center" FontSize="13" />
+				<StackLayout Padding="10,10,5,10" HorizontalOptions="Center">
+					<Image Source="kshelp3.png" x:Name="kshelp3" WidthRequest="200" HeightRequest="40"  Aspect="Fill" />
+				</StackLayout>
+				<Label x:Name="fill2" TextColor="#FF818181" Text="Ο πολλαπλασιαστής,  πολλαπλασιάζει τις στήλες συμμετοχής και βρίσκεται σε κάθε περιοχή συμπλήρωσης, με επιλογές 2, 3, 4, 5, 6, 8, 10, 12, 20, οι οποίες λειτουργούν αθροιστικά." XAlign="Center" FontSize="13" />
+			</StackLayout>
+		</ContentPage>
+		<ContentPage Title="κερδη" BackgroundColor="#ffffff">
+		<StackLayout Orientation="Vertical" Padding="10,0">
+				<StackLayout Padding="10,40,5,30" HorizontalOptions="Center">
+					<Image Source="kstablekino.png"  x:Name="kstablekino"/>
+				</StackLayout>
+				<Label x:Name="Profit" TextColor="#FF818181" Text="Κάθε φορά που γίνεται μια κλήρωση κληρώνονται 20 διαφορετικοί αριθμοί από το 1 μέχρι το 80. Τα χρήματα που κερδίζουμε εξαρτόνται από το πόσα νούμερα έχουμε παίξει και πόσα νούμερα έχουμε πιάσει." XAlign="Center" FontSize="18" />
+			</StackLayout>
+		</ContentPage>
+	</TabbedPage.Children>
+</TabbedPage>

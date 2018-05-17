@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.HourDraws">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" MinimumWidthRequest="300" HorizontalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="#ffffff">
+			<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+				<Label HorizontalOptions="Center" TextColor="#ffffff" FontSize="30" Text="Αριθμοί / ώρα" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" x:Name="PickerArea" HorizontalOptions="FillAndExpand">
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" x:Name="NoticeArea" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="10,5,10,10" HeightRequest="35">
+				<Label Text="" XAlign="Center" x:Name="NoticeText" TextColor="#FF818181" FontSize="12" />
+			</StackLayout>
+			<ListView x:Name="HoursDrawList" RowHeight="60" HasUnevenRows="true"  HorizontalOptions="CenterAndExpand" ItemTapped="ListItem_Click">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand" >
+								<StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand">
+									<AbsoluteLayout>
+										<Image Source="kinoball.png" WidthRequest="50" HeightRequest="44" />
+										<StackLayout AbsoluteLayout.LayoutBounds="0.27,0.20,0.25,0.45" AbsoluteLayout.LayoutFlags="All">
+											<Label Text="{Binding numberShow}" XAlign="Center" TextColor="Black" FontSize="15" />
+										</StackLayout>
+									</AbsoluteLayout>
+									<StackLayout Orientation="Vertical" Padding="5,0,0,15"  HorizontalOptions="CenterAndExpand">
+										<StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand">
+											<Label Text="O αριθμός έχει εμφανιστεί : " FontSize="12" HorizontalOptions="Start" TextColor="#FF8393A0" />
+											<Label Text="{Binding count}" HorizontalOptions="Start" FontSize="12" TextColor="#FF8393A0" />
+											<Label Text="Φορές" HorizontalOptions="Start" FontSize="12" TextColor="#FF8393A0" />
+										</StackLayout>
+										<StackLayout Orientation="Horizontal" Padding="5,0,0,0"  HorizontalOptions="CenterAndExpand">
+											<Label Text="Σε σύνολο " FontSize="10" HorizontalOptions="Start" TextColor="#FF8393A0" />
+											<Label Text="{Binding totalcounts}" HorizontalOptions="Start" FontSize="10" TextColor="#FF8393A0" />
+											<Label Text=" κληρώσεων χθες και σήμερα" HorizontalOptions="Start" FontSize="10" TextColor="#FF8393A0" />
+										</StackLayout>
+										<StackLayout Orientation="Horizontal">
+											<Label XAlign="Center" Text="Επιλέξτε εδώ για να δείτε αναλυτικά τις εμφανίσεις του αριθμού" FontSize="9" HorizontalOptions="End" TextColor="Red" FontAttributes="Italic" />
+										</StackLayout>
+									</StackLayout>
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<StackLayout x:Name="AdBanner" Padding="0,10,0,0">
+
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

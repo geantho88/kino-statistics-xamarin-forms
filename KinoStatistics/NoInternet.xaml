@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.NoInternet">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="8" BackgroundColor="#ffffff">
+			<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+				<Label HorizontalOptions="Center" TextColor="#ffffff" FontSize="30" Text="Kino Statistics V 1.2" />
+			</StackLayout>
+			<StackLayout Orientation="Vertical" Padding="0,20,0,0">
+			<Label Text="Χωρίς Σύνδεση" XAlign="Center" x:Name="nointernetlabel" TextColor="Red"/>
+			</StackLayout>
+			<StackLayout Orientation="Vertical" Padding="10,0">
+				<StackLayout Padding="10,40,5,30" HorizontalOptions="Center">
+					<Image Source="ksnowifi.png" x:Name="ksnowifi" />
+				</StackLayout>
+				<Label x:Name="nointernettext" TextColor="#dddddd" Text="Η εφαρμογή Kino Statistics απαιτεί συνδεσιμότητα στο internet για την λήψη και ανάλυση των πιο πρόσφατων κληρώσεων. Παρακαλούμε ελέγξτε την συνδεσιμότητα της συσκευής σας και ξαναπροσπαθήστε αργότερα" XAlign="Center" FontSize="18" />
+			</StackLayout>
+			<StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand" Padding="0,0,0,10" Orientation="Horizontal">
+				<Button Text="Έξοδος" VerticalOptions="End" FontSize="11" BackgroundColor="#255A9C" Clicked="ExitButton_Click" />
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

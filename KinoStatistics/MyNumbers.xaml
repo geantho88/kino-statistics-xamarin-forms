@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.MyNumbers">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="1" BackgroundColor="#ffffff">
+			<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+				<Label HorizontalOptions="Center" TextColor="#ffffff" FontSize="30" x:Name="title" Text="Οι αριθμοί μου" />
+			</StackLayout>
+			<StackLayout HorizontalOptions="FillAndExpand" Padding="7,7,7,7">
+				<Label HorizontalOptions="Center" TextColor="#FF6DB7D8" FontSize="13" XAlign="Center" x:Name="detail1" Text="Εισάγετε τους αγαπημένους σας αριθμούς γιά να τους αποθηκεύσετε στην λίστα." />
+			</StackLayout>
+			<StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
+				<StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,10,0">
+					<Entry Keyboard="Numeric" Placeholder="Εισαγωγή αριθμού 1...80)" x:Name="entrytext" BackgroundColor="#255A9C" TextColor="#ffffff" />
+				</StackLayout>
+				<StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="0,0,0,10" Orientation="Horizontal">
+					<Button Text="Εισαγωγή" BackgroundColor="#255A9C" x:Name="instertbutton" FontSize="8" Clicked="Insert_Click" HeightRequest="30" />
+				</StackLayout>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" Padding="7,1,1,7" x:Name="PickerArea" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+				
+			</StackLayout>
+		<StackLayout x:Name="MynumbersArea" HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+				<Label Text="" VerticalOptions="Start" x:Name="percentagenmbr" TextColor="#FF6DB7D8"  XAlign="Center" />
+				<Label Text="" VerticalOptions="Start" x:Name="countnmbr" TextColor="#FF6DB7D8"  XAlign="Center" />
+				<Label Text="" VerticalOptions="Start" x:Name="countbar" TextColor="#FF6DB7D8"  XAlign="Center" />
+				<Label Text="" VerticalOptions="Start" x:Name="lastdrawdate1" TextColor="#FF818181"  XAlign="Center" />
+				<Label Text="" VerticalOptions="Start" x:Name="lastdrawdate2" TextColor="#FF818181"  XAlign="Center" />
+				<Label Text="" VerticalOptions="Start" x:Name="drawscount" TextColor="#FF6DB7D8"  XAlign="Center" />
+				<Label Text="" VerticalOptions="Start" x:Name="posibility" TextColor="#FF6DB7D8"  XAlign="Center" />
+			</StackLayout>
+		    <StackLayout x:Name="DeleteButtonArea" HorizontalOptions="Center">
+			</StackLayout>
+			<StackLayout HorizontalOptions="EndAndExpand">
+				<Label Text="AVC IT ®" FontAttributes="Bold" TextColor="#FF1D4151" FontSize="18" />
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

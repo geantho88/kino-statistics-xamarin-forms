@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.RandomNumbers">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="4" BackgroundColor="#ffffff">
+			<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+				<Label HorizontalOptions="Center" TextColor="#ffffff" FontSize="30" x:Name="title" Text="Τυχαίοι αριθμοί" />
+			</StackLayout>
+			<StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Padding="10,3,10,3">
+				<Label HorizontalOptions="Center" TextColor="#FF6DB7D8" FontSize="12" x:Name="detail1" XAlign="Center" Text="Επιλέξτε αριθμούς με βάση την πιθανότητα εμφάνισης τους στο παιχνίδι που υπολόγισε η μηχανή kino statistcs" />
+			</StackLayout>
+			<StackLayout x:Name="CheckBoxArea" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+			</StackLayout>
+			<StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Padding="10,3,10,3">
+				<Label HorizontalOptions="Center" TextColor="#FF6DB7D8" FontSize="12"  x:Name="detail2" XAlign="Center" Text="Επιλέξτε το παιχνίδι των αριθμών που θα παίξετε" />
+			</StackLayout>
+			<StackLayout x:Name="ButtonsArea1" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+			</StackLayout>
+			<StackLayout x:Name="ButtonsArea2" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+			</StackLayout>
+			<StackLayout x:Name="GenerationHeaderArea"  HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Padding="7,5,7,2">
+				<Label HorizontalOptions="Center" x:Name="GenerationHeaderText" TextColor="#FF6DB7D8" FontSize="12" XAlign="Center" Text="" />
+			</StackLayout>
+			<StackLayout x:Name="GenerationArea1" HorizontalOptions="Center"   Orientation="Horizontal">
+			</StackLayout>
+			<StackLayout x:Name="GenerationArea2"  HorizontalOptions="Center"  Orientation="Horizontal">
+			</StackLayout>
+			<StackLayout x:Name="GenerationBottomArea"  HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="7,15,7,7">
+				<Label HorizontalOptions="Center" x:Name="GenerationBottomText" TextColor="#FF6DB7D8" FontSize="14" XAlign="Center" Text="" />
+			</StackLayout>
+			<StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand" Padding="0,0,0,2" Orientation="Horizontal">
+				<Button Text="Δημιουργία" FontSize="12" x:Name="GenerateButton" VerticalOptions="End" Clicked="GenerateButtonClick" BackgroundColor="#255A9C" />
+			</StackLayout>
+			<StackLayout x:Name="AdBanner">
+
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

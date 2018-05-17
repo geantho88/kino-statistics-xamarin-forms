@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.NextNumbers">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="#ffffff">
+			<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+				<Label HorizontalOptions="Center" TextColor="#ffffff" FontSize="30" Text="Επόμενοι αριθμοι" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<StackLayout Padding="15,10,15,15" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+					<Label Text="Αριθμός" FontSize="22" TextColor="#FF8393A0" />
+					<Image x:Name="sortnumberbtn" Source="kssortup.png" WidthRequest="24" HeightRequest="24">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="sortnumberbtn_Tap" />
+						</Image.GestureRecognizers>
+					</Image>
+				</StackLayout>
+				<StackLayout Padding="0,10,15,15" HorizontalOptions="EndAndExpand" Orientation="Horizontal">
+					<Label Text="Εμφανίσεις" FontSize="22" TextColor="#FF8393A0" />
+					<Image x:Name="sortcountbtn" Source="kssortdown.png" WidthRequest="24" HeightRequest="24">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="sortcountbtn_Tap" />
+						</Image.GestureRecognizers>
+					</Image>
+				</StackLayout>
+			</StackLayout>
+			<ListView x:Name="NextNumbersList" RowHeight="60" HasUnevenRows="true"  HorizontalOptions="FillAndExpand">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand" Padding="10,10,10,10">
+								<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+									<AbsoluteLayout>
+										<Image Source="kinoball.png" WidthRequest="50" HeightRequest="44" />
+										<StackLayout AbsoluteLayout.LayoutBounds="0.27,0.20,0.25,0.45" AbsoluteLayout.LayoutFlags="All">
+											<Label Text="{Binding numberShow}" XAlign="Center" TextColor="Black" FontSize="16" />
+										</StackLayout>
+									</AbsoluteLayout>
+									<StackLayout Orientation="Vertical" Padding="5,0,0,15"  HorizontalOptions="FillAndExpand">
+										<StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+											<Label Text="Εμφανίστηκε πριν από" FontSize="12" TextColor="#FF8393A0" />
+											<Label Text="{Binding countfromlastdraw}" FontSize="12" TextColor="#FF8393A0" />
+											<Label Text="Κληρώσεις" HorizontalOptions="Start" FontSize="12" TextColor="#FF8393A0" />
+										</StackLayout>
+										<StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+											<Label Text="Τελευταία εμφάνιση" FontSize="12" HorizontalOptions="End" TextColor="#FF8393A0" />										
+										</StackLayout>
+										<StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+											<Label Text="{Binding stringlastdrawshowedTime}" HorizontalOptions="Start" FontSize="12" TextColor="#FF8393A0" />
+											</StackLayout>
+										<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+											<Label Text="Πιθανότητα εμφάνισης" FontSize="12" HorizontalOptions="End" TextColor="#FF8393A0" />
+											<Label Text="{Binding possibilitytoshownext}" HorizontalOptions="Start" FontSize="12" TextColor="{Binding XamarinPosibilityTextColor}" />
+										</StackLayout>
+									</StackLayout>
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<StackLayout x:Name="AdBanner" Padding="0,10,0,0">
+
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

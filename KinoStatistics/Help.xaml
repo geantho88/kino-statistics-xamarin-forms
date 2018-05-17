@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.Help">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="8" BackgroundColor="#ffffff" Padding="0,0,0,10">
+			<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+				<Label HorizontalOptions="Center" x:Name="Title" TextColor="#ffffff" FontSize="30" Text="Βοήθεια" />
+			</StackLayout>
+			<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10,0,10,0">
+				<Label x:Name="helptext1" HorizontalOptions="Center" TextColor="#FF818181" XAlign="Center" Text="Το Kino statistics είναι μια εφαρμογή που προσφέρει στατιστικά στοιχεία για το δημοφιλές παιχνίδι του ΟΠΑΠ Kino.  Η λήψη των δεδομένων των κληρώσεων πραγματοποιείται απο τον επίσημο πάροχο του ΟΠΑΠ http://www.opap.gr/web/guest/web-services. Η εφαρμογή σε καμία περίπτωση δεν εγγυάται σίγουρα κέρδη και δεν προβλέπει με ακρίβεια αποτελέσματα μελλοντικών κληρώσεων. H AVC IT δεν φέρει καμία ευθύνη για την εγκυρότητα των στοιχείων των κληρώσεων. Παίξτε υπεύθυνα" />
+			</StackLayout>
+			<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10,0,10,0">
+				<Label x:Name="helptext2" HorizontalOptions="Center" TextColor="#FF6DB7D8" XAlign="Center" Text="Για προβλήματα στην εμφάνιση και την ανάλυση των στοιχείων της εφαρμογής παρακαλώ επικοινωνήστε στο avc-it@outlook.com" />
+			</StackLayout>
+			<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Spacing="8" BackgroundColor="#ffffff">
+			</StackLayout>
+			<Image Source="avc.png" HorizontalOptions="Center" WidthRequest="84" HeightRequest="84" x:Name="AVC"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

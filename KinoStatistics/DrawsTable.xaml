@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.DrawsTable">
+  <ContentPage.Content>
+    <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+      <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="#ffffff">
+        <StackLayout  x:Name="Header" HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+          <Label HorizontalOptions="Center" x:Name="title" TextColor="#ffffff" FontSize="30" Text="Πίνακας Πιθανοτήτων" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" x:Name="Details" HorizontalOptions="FillAndExpand">
+          <StackLayout HorizontalOptions="Start" Padding="10,7,10,0">
+            <Label x:Name="DrawNumberlabel" Text="" FontSize="12" XAlign="Center" TextColor="#FF6DB7D8" />
+          </StackLayout>
+          <StackLayout HorizontalOptions="End" Padding="0,0,7,0">
+            <Image Source="ksrefresh.png" x:Name="ksrefresh" WidthRequest="42" HeightRequest="42">
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="RefreshButton_Click" />
+              </Image.GestureRecognizers>
+            </Image>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="Row1" Padding="2,2,2,0">
+          <Grid  ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid ColumnSpacing="0" RowSpacing="0" x:Name="TopGrid1" Grid.Row="0" BindingContext="{x:Reference Name=Button1}"  Height="{Binding Path=WidthRequest}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button1" Grid.Column="0" Text="1" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button2" Grid.Column="1" Text="2" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button3" Grid.Column="2" Text="3" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button4" Grid.Column="3" Text="4" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button5" Grid.Column="4" Text="5" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button6" Grid.Column="5" Text="6" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button7" Grid.Column="6" Text="7" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button8" Grid.Column="7" Text="8" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="Row2" Spacing="0">
+          <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid  ColumnSpacing="0" RowSpacing="0"  x:Name="TopGrid2" Grid.Row="0" BindingContext="{x:Reference Name=Button1}"  Height="{Binding Path=WidthRequest}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button9" Grid.Column="0" Text="9" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button10" Grid.Column="1" Text="10" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button11" Grid.Column="2" Text="11" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button12" Grid.Column="3" Text="12" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button13" Grid.Column="4" Text="13" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button14" Grid.Column="5" Text="14" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button15" Grid.Column="6" Text="15" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button16" Grid.Column="7" Text="16" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="Row3" >
+          <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid  ColumnSpacing="0" RowSpacing="0"  x:Name="TopGrid3" Grid.Row="0" BindingContext="{x:Reference Name=Button1}"  Height="{Binding Path=WidthRequest}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button17" Grid.Column="0" Text="17" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button18" Grid.Column="1" Text="18" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button19" Grid.Column="2" Text="19" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button20" Grid.Column="3" Text="20" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button21" Grid.Column="4" Text="21" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button22" Grid.Column="5" Text="22" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button23" Grid.Column="6" Text="23" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button24" Grid.Column="7" Text="24" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="Row4" >
+          <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid  ColumnSpacing="0" RowSpacing="0"  x:Name="TopGrid4" Grid.Row="0" BindingContext="{x:Reference Name=Button1}"  Height="{Binding Path=WidthRequest}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button25" Grid.Column="0" Text="25" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button26" Grid.Column="1" Text="26" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button27" Grid.Column="2" Text="27" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button28" Grid.Column="3" Text="28" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button29" Grid.Column="4" Text="29" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button30" Grid.Column="5" Text="30" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button31" Grid.Column="6" Text="31" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button32" Grid.Column="7" Text="32" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="Row5" >
+          <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid  ColumnSpacing="0" RowSpacing="0"  x:Name="TopGrid5" Grid.Row="0" BindingContext="{x:Reference Name=Button1}"  Height="{Binding Path=WidthRequest}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button33" Grid.Column="0" Text="33" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button34" Grid.Column="1" Text="34" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button35" Grid.Column="2" Text="35" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button36" Grid.Column="3" Text="36" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button37" Grid.Column="4" Text="37" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button38" Grid.Column="5" Text="38" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button39" Grid.Column="6" Text="39" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button40" Grid.Column="7" Text="40" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="Row6" >
+          <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid  ColumnSpacing="0" RowSpacing="0"  x:Name="TopGrid6" Grid.Row="0" BindingContext="{x:Reference Name=Button1}"  Height="{Binding Path=WidthRequest}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button41" Grid.Column="0" Text="41" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button42" Grid.Column="1" Text="42" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button43" Grid.Column="2" Text="43" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button44" Grid.Column="3" Text="44" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button45" Grid.Column="4" Text="45" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button46" Grid.Column="5" Text="46" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button47" Grid.Column="6" Text="47" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button48" Grid.Column="7" Text="48" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="Row7" >
+          <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid  ColumnSpacing="0" RowSpacing="0"  x:Name="TopGrid7" Grid.Row="0" BindingContext="{x:Reference Name=Button1}"  Height="{Binding Path=WidthRequest}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button49" Grid.Column="0" Text="49" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button50" Grid.Column="1" Text="50" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button51" Grid.Column="2" Text="51" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button52" Grid.Column="3" Text="52" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button53" Grid.Column="4" Text="53" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button54" Grid.Column="5" Text="54" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button55" Grid.Column="6" Text="55" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button56" Grid.Column="7" Text="56" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="Row8" >
+          <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid  ColumnSpacing="0" RowSpacing="0"  x:Name="TopGrid8" Grid.Row="0" BindingContext="{x:Reference Name=Button1}"  Height="{Binding Path=WidthRequest}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button57" Grid.Column="0" Text="57" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button58" Grid.Column="1" Text="58" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button59" Grid.Column="2" Text="59" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button60" Grid.Column="3" Text="60" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button61" Grid.Column="4" Text="61" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button62" Grid.Column="5" Text="62" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button63" Grid.Column="6" Text="63" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button64" Grid.Column="7" Text="64" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="Row9" >
+          <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid  ColumnSpacing="0" RowSpacing="0"  x:Name="TopGrid9" Grid.Row="0" BindingContext="{x:Reference Name=Button1}"  Height="{Binding Path=WidthRequest}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button65" Grid.Column="0" Text="65" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button66" Grid.Column="1" Text="66" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button67" Grid.Column="2" Text="67" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button68" Grid.Column="3" Text="68" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button69" Grid.Column="4" Text="69" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button70" Grid.Column="5" Text="70" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button71" Grid.Column="6" Text="71" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button72" Grid.Column="7" Text="72" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="Row10" >
+          <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid  ColumnSpacing="0" RowSpacing="0"  x:Name="Toprid10" Grid.Row="0" BindingContext="{x:Reference Name=Button1}"  Height="{Binding Path=WidthRequest}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button73" Grid.Column="0" Text="73" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button74" Grid.Column="1" Text="74" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button75" Grid.Column="2" Text="75" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button76" Grid.Column="3" Text="76" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button77" Grid.Column="4" Text="77" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button78" Grid.Column="5" Text="78" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button79" Grid.Column="6" Text="79" />
+              <Button BorderColor="Black" TextColor="Black" x:Name="Button80" Grid.Column="7" Text="80" />
+            </Grid>
+          </Grid>
+        </StackLayout>
+        <StackLayout x:Name="AdBanner" Padding="0,2,0,0">
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

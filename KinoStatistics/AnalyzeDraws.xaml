@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.AnalyzeDraws">
+  <ContentPage.Content>
+    <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+      <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="8" BackgroundColor="#ffffff" Padding="0,0,0,10">
+        <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+          <Label HorizontalOptions="Center" x:Name="Title" TextColor="#ffffff" FontSize="30" Text="Ανάλυση κληρώσεων" />
+        </StackLayout>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="60" Orientation="Horizontal">
+          <StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand">
+            <Image Source="ksengine.png" x:Name="ksengine"/>
+          </StackLayout>
+          <StackLayout VerticalOptions="Fill" Padding="0,0,15,0" HorizontalOptions="Center" Orientation="Vertical">
+            <StackLayout>
+              <Label x:Name="analyzedrawlabel1" TextColor="#FF818181" Text="" XAlign="Center"  />
+            </StackLayout>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="PropabilityButton" Spacing="0">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="PropabilityButton_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout Padding="10,0,20,0" HorizontalOptions="StartAndExpand" Spacing="0">
+            <Label Text="Συχνότητα εμφάνισης" TextColor="#FF818181" x:Name="PropabilityTitle"  />
+            <Label Text="Ποσοστιαία εμφάνιση αριθμών στο σύνολο των κληρώσεων "  TextColor="#FF6DB7D8" FontAttributes="Italic"  x:Name="PropabilityDetail"  />
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png" x:Name="ksarrowright1"/>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="DisplayButton" Spacing="0">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="DisplayButton_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout Padding="10,0,20,0" HorizontalOptions="StartAndExpand" Spacing="0">
+            <Label Text="Εμφανίσεις αριθμών" TextColor="#FF818181"  x:Name="DisplayTitle"  />
+            <Label Text="Το σύνολο εμφανίσεων των αριθμών στο σύνολο των κληρώσεων " TextColor="#FF6DB7D8" FontAttributes="Italic" x:Name="DisplayDetail"/>
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png"  x:Name="ksarrowright2"/>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="NextNumbersButton" Spacing="0">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="NextNumbersButton_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout Padding="10,0,20,0" HorizontalOptions="StartAndExpand" Spacing="0">
+            <Label Text="Επόμενοι αριθμοι" TextColor="#FF818181" x:Name="NextNumbersTitle"  />
+            <Label Text="Πιθανοτήτα εμφάνισης αριθμών με βάση την συχνότητα εμφάνισης τους"  TextColor="#FF6DB7D8" FontAttributes="Italic" x:Name="NextNumbersDetail" />
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png"  x:Name="ksarrowright3"/>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="EndingNumbersButton" Spacing="0">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="EndingNumbersButton_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout Padding="10,0,20,0" HorizontalOptions="StartAndExpand" Spacing="0">
+            <Label Text="Λήγοντες" TextColor="#FF818181" x:Name="EndingNumbersTitle" />
+            <Label Text="Πότε εμφανίζονται οι Λήγοντες. Είναι οι κάθετες στήλες (1-11…71,2-12…72)" TextColor="#FF6DB7D8" FontAttributes="Italic" x:Name="EndingNumbersDetail" />
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png"  x:Name="ksarrowright4"/>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="HoursNumberButton" Spacing="0">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="HoursNumberButton_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout Padding="10,0,20,0" HorizontalOptions="StartAndExpand" Spacing="0">
+            <Label Text="Εμφανίσεις αριθμων / ώρα" TextColor="#FF818181"  x:Name="HoursNumberTitle"  />
+            <Label Text="Ανάλυση εμφάνισης αριθμών των κληρώσεων ανα ώρα (π.χ 09:00-10:00)" TextColor="#FF6DB7D8"  FontAttributes="Italic"  x:Name="HoursNumberDetail"/>
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png"  x:Name="ksarrowright5"/>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+          <StackLayout Padding="10,0,0,5" HorizontalOptions="StartAndExpand">
+            <Image Source="ksclock2.png" x:Name="ksclock2" />
+          </StackLayout>
+          <StackLayout Padding="0,0,5,0" HorizontalOptions="End">
+            <Label x:Name="analyzedrawlabel2" Text="" XAlign="Center" TextColor="#FF42545D"  FontAttributes="Italic" />
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

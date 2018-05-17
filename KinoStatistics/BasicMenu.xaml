@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KinoStatistics.BasicMenu">
+  <ContentPage.Content>
+    <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+      <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="8" BackgroundColor="#ffffff" Padding="0,0,0,10">
+        <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#255A9C">
+          <Label HorizontalOptions="Center" TextColor="#ffffff"  FontSize="25"  x:Name="Title" Text="Kino Statistics V 1.5" />
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+          <StackLayout Padding="10,0,5,0" HorizontalOptions="StartAndExpand">
+            <Image Source="ksanalyze.png" x:Name="ksanalyze"/>
+          </StackLayout>
+          <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+            <Label x:Name="drawlabel1" Text="Λήψη δεδομένων Παρακαλώ περιμένετε..." TextColor="#FF818181" XAlign="Center" />
+            <Label x:Name="drawlabel2" Text="Η διαδικασία διαρκεί μερικά δευτερόλεπτα"  XAlign="Center"  TextColor="#FF6DB7D8" />
+          </StackLayout>
+          <StackLayout Padding="10,0,5,0" HorizontalOptions="End">
+            <Image Source="ksrefresh.png" x:Name="ksrefresh" >
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="RefreshButton_Click" />
+              </Image.GestureRecognizers>
+            </Image>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="RandomNumbersBtn">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="RandomNumbersBtn_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout HorizontalOptions="StartAndExpand" Spacing="0" Padding="10,0,0,0">
+            <Label Text="Τυχαίοι αριθμοί" HorizontalOptions="StartAndExpand"  x:Name="RandomNumbersBtnTitle" TextColor="#FF818181" />
+            <Label Text="Δημιουργία αριθμών με βάση την πιθανότητα εμφάνισης τους" HorizontalOptions="StartAndExpand" TextColor="#FF6DB7D8" FontAttributes="Italic" x:Name="RandomNumbersBtnDetail" />
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png"  x:Name="ksarrowright1" />
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="AnalyzeDrawsBtn">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="AnalyzeDrawsBtn_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout HorizontalOptions="StartAndExpand"  Spacing="0" Padding="10,0,0,0">
+            <Label Text="Ανάλυση κληρώσεων" HorizontalOptions="StartAndExpand"  TextColor="#FF818181" x:Name="AnalyzeDrawsBtnTitle" />
+            <Label Text="Προβολή αναλυτικών στοιχείων των κληρώσεων" TextColor="#FF6DB7D8" HorizontalOptions="StartAndExpand" FontAttributes="Italic" x:Name="AnalyzeDrawsBtnDetail" />
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png"  x:Name="ksarrowright2" />
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="ChancesTableBtn">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="ChancesTableBtn_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout HorizontalOptions="StartAndExpand"  Spacing="0" Padding="10,0,0,0">
+            <Label Text="Πίνακας Πιθανοτήτων" HorizontalOptions="StartAndExpand"  TextColor="#FF818181" x:Name="ChancesTableBtnTitle" />
+            <Label Text="Προβολή πίνακα πιθανοτήτων εμφάνισης αριθμών" HorizontalOptions="StartAndExpand" TextColor="#FF6DB7D8" FontAttributes="Italic"   x:Name="ChancesTableBtnDetail" />
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png" x:Name="ksarrowright3" />
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="MyNumbersBtn">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="MyNumbersBtn_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout HorizontalOptions="StartAndExpand"  Spacing="0" Padding="10,0,0,0">
+            <Label Text="Οι αριθμοί μου" HorizontalOptions="StartAndExpand"  TextColor="#FF818181"   x:Name="MyNumbersBtnTitle"/>
+            <Label Text="Αποθηκεύστε τους αγαπημένους σας αριθμούς Kino" HorizontalOptions="StartAndExpand" TextColor="#FF6DB7D8" FontAttributes="Italic" x:Name="MyNumbersBtnDetail" />
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png" x:Name="ksarrowright4" />
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="TheGameBtn">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TheGameBtn_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout HorizontalOptions="StartAndExpand"  Spacing="0" Padding="10,0,0,0">
+            <Label Text="Το παιχνίδι" HorizontalOptions="StartAndExpand"  TextColor="#FF818181" x:Name="TheGameBtnTitle" />
+            <Label Text="Το Kino. Αναλυτικός οδηγός για το πώς παίζεται για αρχάριους" HorizontalOptions="StartAndExpand" TextColor="#FF6DB7D8"  FontAttributes="Italic" x:Name="TheGameBtnDetail" />
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png" x:Name="ksarrowright5"/>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="HelpBtn">
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="HelpBtn_Click" />
+          </StackLayout.GestureRecognizers>
+          <StackLayout HorizontalOptions="StartAndExpand"  Spacing="0" Padding="10,0,0,0">
+            <Label Text="Βοήθεια" TextColor="#FF818181" HorizontalOptions="StartAndExpand"  x:Name="HelpBtnTitle" />
+            <Label Text="Αρχείο βοήθειας και πληροφοριών της εφαρμογής Kino Statistics" HorizontalOptions="StartAndExpand"  TextColor="#FF6DB7D8" FontAttributes="Italic" x:Name="HelpBtnDetail"  />
+          </StackLayout>
+          <StackLayout Padding="0,10,15,0" HorizontalOptions="End">
+            <Image Source="ksarrowright.png" x:Name="ksarrowright6"/>
+          </StackLayout>
+        </StackLayout>
+        <!--	<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+			<StackLayout Padding="10,0,0,5" HorizontalOptions="StartAndExpand">
+				<Image Source="ksclock2.png" WidthRequest="24" HeightRequest="24" />
+			</StackLayout>
+			<StackLayout Padding="5,0,5,0" HorizontalOptions="StartAndExpand">
+				<Label x:Name="drawlabel3" Text="" TextColor="#FF42545D" FontSize="14" XAlign="Center" FontAttributes="Italic" />
+			</StackLayout>
+		</StackLayout> -->
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>
